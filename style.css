@@ -2,19 +2,27 @@ nav,
 section {
   display: block;
 }
+@keyframes slideUpAndHide {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
 
+.slideBrowser {
+  animation: slideUpAndHide 2s ease-in-out forwards;
+  position: relative; /* Ensure correct positioning */
+}
 body {
   line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
 }
 
 blockquote::before,
