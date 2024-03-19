@@ -443,7 +443,7 @@ body {
 @media screen and (min-width: 1440px) {
   .hero__browsers {
     grid-column: 6 / -1;
-    left: 5%;
+    left: 0%;
   }
 }
 
@@ -453,7 +453,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 92.64%;
+  width: 80%;
   z-index: 6;
 }
 

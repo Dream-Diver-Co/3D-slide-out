@@ -547,6 +547,8 @@
       </div>
     </header>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- <script src="./coustom.js"></script> -->
+    <script src="./app.js"></script>
     <!-- <script>
       // Select all elements to be animated
       const items = document.querySelectorAll(".browser");
@@ -580,7 +582,7 @@
         animateItems();
       }, 9000); // Adjust the interval as needed
     </script> -->
-    <script>
+    <!-- <script>
       // Select all elements to be animated
       const items = document.querySelectorAll(".browser");
 
@@ -590,8 +592,8 @@
           anime({
             targets: item,
             opacity: [1, 0], // Animate opacity from 0 to 1
-            translateY: [0, -120], // Animate translateY from -120 to 0
-            translateX: [0, 10],
+            translateY: [index, -120], // Animate translateY from -120 to 0
+            translateX: [index + 5, 0],
             delay: index * 1000, // Delay each item's animation (adjust as needed)
             duration: 2000, // Duration of each animation
             easing: "easeInOutSine",
@@ -607,12 +609,44 @@
       setInterval(() => {
         // Reset opacity and translateY for all items
         items.forEach((item, index) => {
-          // item.sl;
+          // item.classList;
           // item.style.transform = "translateY(-120px)";
         });
         // Re-run the animation
         animateItems();
       }, 5000); // Repeat every 10 seconds (adjust as needed)
-    </script>
+    </script> -->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+      // Select all elements to be animated
+      const items = document.querySelectorAll(".browser");
+
+      // Function to animate items in a loop
+      function animateItems() {
+        anime.remove(items); // Remove any existing animations
+
+        // Create an animation timeline
+        const timeline = anime.timeline({
+          loop: true, // Loop the animation continuously
+        });
+
+        // Define animations for each item sequentially
+        items.forEach((item, index) => {
+          timeline.add({
+            targets: item,
+            opacity: [1, 0], // Animate opacity from 1 to 0
+            translateY: [0, -120], // Animate translateY from 0 to -120
+            translateX: index * 2, // Adjust translateX based on index
+            duration: 2000, // Duration of each animation
+            easing: "easeInOutSine",
+            delay: index * 1000, // Delay each item's animation (adjust as needed)
+          });
+        });
+      }
+
+      // Initial animation
+      animateItems();
+    </script> -->
   </body>
 </html>
